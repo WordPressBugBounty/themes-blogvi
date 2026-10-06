@@ -1,16 +1,32 @@
 <?php
-
 /**
- * Default Option
+ * Default option values.
+ *
+ * @package Blogvi
+ * @author  Peregrine Themes
+ * @since   1.0.0
  */
 
-add_filter( 'bloglo_default_option_values', 'bloglo_default_options', 11 );
-function bloglo_default_options( $defaults ) {
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-	$defaults['bloglo_accent_color']     = '#C26148';
-	$defaults['bloglo_text_color']       = '#333333';
-	$defaults['bloglo_link_hover_color'] = '#94979e';
-	$defaults['bloglo_headings_color']   = '#333333';
+add_filter( 'bloglo_default_option_values', 'blogvi_default_options', 11 );
+
+/**
+ * Override the parent theme default option values.
+ *
+ * @since 1.0.0
+ * @param array $defaults Parent theme default option values.
+ * @return array
+ */
+function blogvi_default_options( $defaults ) {
+
+	$defaults['bloglo_accent_color']             = '#C26148';
+	$defaults['bloglo_content_text_color']       = '#333333';
+	$defaults['bloglo_content_link_hover_color'] = '#94979e';
+	$defaults['bloglo_headings_color']           = '#333333';
 
 	$defaults['bloglo_site_layout'] = 'fw-contained';
 
@@ -88,7 +104,7 @@ function bloglo_default_options( $defaults ) {
 			'type'      => 'socials',
 			'values'    => array(
 				'style'      => 'rounded-fill',
-				'size'       => 'mideum',
+				'size'       => 'standard',
 				'location'   => 'right',
 				'visibility' => 'hide-mobile-tablet',
 			),
@@ -216,7 +232,7 @@ function bloglo_default_options( $defaults ) {
 			),
 		)
 	);
-	
+
 	$defaults['bloglo_copyright_text_color'] = bloglo_design_options_defaults(
 		array(
 			'color' => array(

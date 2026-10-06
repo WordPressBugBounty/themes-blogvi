@@ -2,16 +2,16 @@
 Contributors: Peregrinethemes
 Tags: two-columns, right-sidebar, left-sidebar, footer-widgets, blog, news, entertainment, custom-background, custom-menu, custom-logo, post-formats, sticky-post, editor-style, threaded-comments, translation-ready, custom-colors, featured-images, full-width-template, theme-options, flexible-header, wide-blocks
 Requires at least: 5.4
-Tested up to: 6.6
+Tested up to: 7.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 
 A lightweight and highly customizable multi-purpose blog theme that makes it easy for anyone to create their perfect website.
 
 == Description ==
-A child theme of Bloglo, Blogvi offers a boxed width design with a distinctive background color and a pattern image. This theme showcases a horizontal blog list style and provides users with extensive customization options for color and typography adjustments.Blogvi is lightweight, moderate and customizable News Magazine WordPress theme. You'll be able fully customize your site with rich customization options. It is idealize for personal and multi-author bloggers and content publishers. Blogvi is suitable for dynamic news, newspaper, magazine, blogs, publishers, publishing, editors, online and gaming magazines, personal blogs, news portals or review site and any creative site. Blogvi is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. Live preview : https://demo.peregrine-themes.com/bloglo/blogvi/
+A child theme of Bloglo, Blogvi offers a boxed width design with a distinctive background color and a pattern image. This theme showcases a horizontal blog list style and provides users with extensive customization options for color and typography adjustments. Blogvi is lightweight, moderate and customizable News Magazine WordPress theme. You'll be able fully customize your site with rich customization options. It is idealize for personal and multi-author bloggers and content publishers. Blogvi is suitable for dynamic news, newspaper, magazine, blogs, publishers, publishing, editors, online and gaming magazines, personal blogs, news portals or review site and any creative site. Blogvi is SEO friendly, WPML, Gutenberg, WooCommerce, translation and RTL ready. Live preview : https://demo.peregrine-themes.com/bloglo/blogvi/
 
 == Frequently Asked Questions ==
 
@@ -24,10 +24,18 @@ A child theme of Bloglo, Blogvi offers a boxed width design with a distinctive b
 
 == Copyright ==
 
-Blogvi WordPress Theme, Copyright (c) 2023, Peregrinethemes
+Blogvi WordPress Theme, Copyright (c) 2023-2026, Peregrinethemes
 Blogvi is distributed under the terms of the GNU GPLs
 
 == Changelog ==
+
+= 1.0.6 =
+* Tested up to WordPress 7.1 and Bloglo 1.1.25.
+* Fixed: Text color and link hover color defaults were not applied after the parent theme renamed those options.
+* Fixed: Invalid social icon size in the default header widgets.
+* Security: Added direct access protection to all PHP files.
+* Improved: The child stylesheet now loads after the parent theme stylesheet and is versioned for cache busting; removed the redundant parent style.css request.
+* Improved: Prefixed all functions and variables, simplified theme setup and updated code to follow WordPress Coding Standards.
 
 = 1.0.5 =
 * Fixed Category Dropdown widget style issue.

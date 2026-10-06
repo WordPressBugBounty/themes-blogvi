@@ -7,6 +7,15 @@
  * @since       1.0.0
  */
 
+/**
+ * Do not allow direct script access.
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Parent theme (Bloglo) hooks.
+
 ?>
 
 <div class="bloglo-container bloglo-header-container">

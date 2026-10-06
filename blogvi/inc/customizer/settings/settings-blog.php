@@ -1,7 +1,27 @@
 <?php
+/**
+ * Blog customizer settings.
+ *
+ * @package Blogvi
+ * @author  Peregrine Themes
+ * @since   1.0.0
+ */
 
-add_filter( 'bloglo_customizer_options', 'bloglo_customizer_blog_options', 11 );
-function bloglo_customizer_blog_options( array $options ) {
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+add_filter( 'bloglo_customizer_options', 'blogvi_customizer_blog_options', 11 );
+
+/**
+ * Replace the parent theme blog layout choices.
+ *
+ * @since 1.0.0
+ * @param array $options Customizer options.
+ * @return array
+ */
+function blogvi_customizer_blog_options( array $options ) {
 	// Layout.
 	$options['setting']['bloglo_blog_layout'] = array(
 		'transport'         => 'refresh',

@@ -9,6 +9,15 @@
  * @since       1.0.0
  */
 
+/**
+ * Do not allow direct script access.
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Parent theme (Bloglo) hooks.
+
 ?>
 
 <?php do_action( 'bloglo_before_article' ); ?>
@@ -16,21 +25,21 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'bloglo-article' ); ?><?php bloglo_schema_markup( 'article' ); ?>>
 
 	<?php
-	$bloglo_blog_entry_format = get_post_format();
+	$blogvi_blog_entry_format = get_post_format();
 
-	if ( 'quote' === $bloglo_blog_entry_format ) {
-		get_template_part( 'template-parts/entry/format/media', $bloglo_blog_entry_format );
+	if ( 'quote' === $blogvi_blog_entry_format ) {
+		get_template_part( 'template-parts/entry/format/media', $blogvi_blog_entry_format );
 	} else {
 
-		$bloglo_classes     = array();
-		$bloglo_classes[]   = 'bloglo-blog-entry-wrapper';
-		$bloglo_thumb_align = bloglo_option( 'blog_image_position' );
-		$bloglo_thumb_align = apply_filters( 'bloglo_horizontal_blog_image_position', $bloglo_thumb_align );
-		$bloglo_classes[]   = 'bloglo-thumb-' . $bloglo_thumb_align;
-		$bloglo_classes     = implode( ' ', $bloglo_classes );
+		$blogvi_classes     = array();
+		$blogvi_classes[]   = 'bloglo-blog-entry-wrapper';
+		$blogvi_thumb_align = bloglo_option( 'blog_image_position' );
+		$blogvi_thumb_align = apply_filters( 'bloglo_horizontal_blog_image_position', $blogvi_thumb_align );
+		$blogvi_classes[]   = 'bloglo-thumb-' . $blogvi_thumb_align;
+		$blogvi_classes     = implode( ' ', $blogvi_classes );
 		?>
 
-		<div class="<?php echo esc_attr( $bloglo_classes ); ?>">
+		<div class="<?php echo esc_attr( $blogvi_classes ); ?>">
 			<?php get_template_part( 'template-parts/entry/entry-thumbnail' ); ?>
 
 			<div class="bloglo-entry-content-wrapper">
@@ -42,7 +51,6 @@
 
 				get_template_part( 'template-parts/entry/entry-header' );
 				get_template_part( 'template-parts/entry/entry-summary' );
-
 
 				if ( bloglo_option( 'blog_horizontal_read_more' ) ) {
 					get_template_part( 'template-parts/entry/entry-summary-footer' );

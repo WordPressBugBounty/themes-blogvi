@@ -1,3 +1,11 @@
+= 1.0.6 =
+* Tested up to WordPress 7.1 and Bloglo 1.1.25.
+* Fixed: Text color and link hover color defaults were not applied after the parent theme renamed those options.
+* Fixed: Invalid social icon size in the default header widgets.
+* Security: Added direct access protection to all PHP files.
+* Improved: The child stylesheet now loads after the parent theme stylesheet and is versioned for cache busting; removed the redundant parent style.css request.
+* Improved: Prefixed all functions and variables, simplified theme setup and updated code to follow WordPress Coding Standards.
+
 = 1.0.5 =
 * Fixed Category Dropdown widget style issue.
 * Improve accessibility.
